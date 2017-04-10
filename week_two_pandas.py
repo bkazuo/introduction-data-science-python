@@ -166,3 +166,20 @@ print("---------------")
 df.T
 print(df.T.loc['Cost'])
 print(df.loc['Store 1']['Cost'])
+print("---------------")
+
+print(df.loc[:,['Name', 'Cost']])
+print("---------------")
+
+print(df.drop('Store 1'))
+print("---------------")
+
+copy_df = df.copy()
+copy_df = copy_df.drop('Store 1')
+print(copy_df)
+print("---------------")
+
+copy_df = df.copy()
+print(copy_df)
+del copy_df['Name']
+print(copy_df)
