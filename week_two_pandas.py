@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 
+# The Series Data Structure
 animals = ['Tiger', 'Bear', 'Moose']
 print(pd.Series(animals))
 print("---------------")
@@ -49,9 +50,9 @@ sports = {'Archery': 'Bhutan',
 s = pd.Series(sports)
 print(s)
 print("---------------")
-print(s.iloc[3])
+print(s.iloc[3])		# Index
 print("---------------")
-print(s.loc['Taekwondo'])
+print(s.loc['Taekwondo']) # By label
 print("---------------")
 print(s[3])
 print("---------------")
@@ -73,13 +74,13 @@ print("---------------")
 s = pd.Series([100.00, 120.00, 101.00, 3.00])
 
 total = 0
-for item in s:
+for item in s:	# THIS IS SLOW
     total+=item
 print(total)
 print("---------------")
 
 
-total = np.sum(s)
+total = np.sum(s) # THIS IS FASTER
 print(total)
 print("---------------")
 
